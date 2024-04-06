@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List with Eisenhower Matrix</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <header>
+        <h1>To-Do List</h1>
+    </header>
+    <div class="container">
+        <div class="input-container">
+            <input type="text" id="task-input" placeholder="Add a new task">
+            <input type="date" id="deadline-input">
+            <label for="is-important">Is Important:</label>
+            <input type="checkbox" id="is-important">
+            <button id="add-btn" onclick="addTask()">Add Task</button>
+        </div>
+        <ul id="task-list">
+            <!-- Tasks will be dynamically added here -->
+        </ul>
+        <button id="draw-matrix-btn" onclick="drawMatrix()">Draw Matrix</button>
+    </div>
+    <div class="legend">
+        <h3>Color Legend:</h3>
+        <ul>
+            <li><span class="urgent-important">&nbsp;&nbsp;&nbsp;</span> Urgent and Important </li>
+            <li><span class="urgent-not-important">&nbsp;&nbsp;&nbsp;</span> Urgent but Not Important</li>
+            <li><span class="not-urgent-important">&nbsp;&nbsp;&nbsp;</span> Not Urgent but Important (Future Deadline )</li>
+            <li><span class="not-urgent-not-important">&nbsp;&nbsp;&nbsp;</span> Neither Urgent nor Important (No Deadline)</li>
+        </ul>
+    </div>
+    <div id="matrix-container" class="matrix-container">
+        <!-- Matrix will be drawn here -->
+    </div>
+    <script src="todo.js"></script>
+</body>
+</html>
